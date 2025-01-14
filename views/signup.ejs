@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel = "stylesheet" type = "text/css" href = "/stylesheets/signup.css">
+</head>
+<body>
+    <form action = "/signup" method = "post">
+    <div id = "main">
+        <div id = "container">
+            <img src = "https://images.ctfassets.net/y2ske730sjqp/5QQ9SVIdc1tmkqrtFnG9U1/de758bba0f65dcc1c6bc1f31f161003d/BrandAssets_Logos_02-NSymbol.jpg?w=940">
+            <h2>Sign up</h2>
+            <div id = "box">
+            <div id = "first">
+            <input type = "text" placeholder="Username" name = "username" minlength="4" maxlength="7" required>
+            </div>
+            <br>
+            <div id = "second">
+            <input type = "email" placeholder="Email Address" name = "email" minlength="15" maxlength="17" required>
+            </div>
+            <br>
+            <div id = "third">
+            <input id = "myinput" type = "password" placeholder="Password" name = "password" minlength="5" maxlength="7" required><span onclick="myfunction()">👁</span>
+            </div>
+            <br><br>
+            <button>Sign Up</button>
+            </div>
+        </div>
+    </div>
+</form>
+    <script src = "/javascripts/signup.js"></script>
+</body>
+</html>
