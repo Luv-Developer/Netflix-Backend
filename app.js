@@ -34,7 +34,31 @@ app.post("/signup",async(req,res)=>{
         })
         let token = jwt.sign({email:email,username:username},"hehe")
         res.cookie("token",token)
-        res.send("Data Saved")
+        res.render("homepage")
+    })
+})
+app.get("/logout",(req,res)=>{
+    res.cookie("token","")
+    res.render("signin")
+})
+app.get("/signin",(req,res)=>{
+    res.render("signin")
+})
+app.post("/signin",async(req,res)=>{
+    let {email,password} = req.body
+    let user = await usermodel.findOne({email})  
+    if(!user){
+        res.render("signup")
+    }
+    bcrypt.compare(password,user.password,(err,result)=>{
+        if(result){
+            let token = jwt.sign({email:email,username:user.username},"hehe")
+            res.cookie("token",token)
+            res.render("homepage")
+        }
+        else{
+            res.render("signin")
+        }
     })
 })
 app.listen(port,()=>{

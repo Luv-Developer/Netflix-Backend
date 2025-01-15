@@ -317,7 +317,7 @@ button span{
 #second img{
     width:80px;
     height:80px;
-    margin-top:20px;
+    margin-top:50px;
     border-radius:10px;
 }
 #third{
@@ -335,14 +335,14 @@ button span{
     font-weight:bold;
 }
 #third p{
-    margin-top:20px;
+    margin-top:10px;
     font-size:17px;
     color:rgb(179, 178, 178);
 }
 #third img{
     width:100px;
     height:80px;
-    margin-top:20px;
+    margin-top:30px;
     border-radius:10px;
 }
 #fourth{
@@ -367,7 +367,7 @@ button span{
 #fourth img{
     width:100px;
     height:80px;
-    margin-top:30px;
+    margin-top:50px;
     border-radius:10px;
 }
 #questions{
@@ -661,4 +661,22 @@ button span{
     margin-top:50px;
     font-size:17px;
     color:rgb(184, 179, 179);
+}
+#signup{
+    color:white;
+    width:80px;
+    height:35px;
+    border:1px solid red;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: red;
+    text-align: center;
+    transition:0.2s;
+    font-size:13px;
+    margin-left:-10px;
+}
+#signup:hover{
+background-color: rgb(241, 10, 10);
+border:1px solid rgb(241, 10, 10);
+cursor: pointer;
 }
